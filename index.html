@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letra DNI</title>
+</head>
+
+<body>
+    <h1>Resultado: </h1>
+    <h1 id="resultado"></h1>
+
+    <script>
+        const numDni = prompt("Introduce un número de DNI:");
+
+        if (parseInt(numDni) < 0) {
+            document.getElementById("resultado").innerHTML = "El DNI no es correcto";
+        } else if (parseInt(numDni) > 99999999) {
+            document.getElementById("resultado").innerHTML = "El DNI no es correcto";
+        } else {
+            const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+            const posicionLetra = numDni % 23;
+
+            const letra = letras[posicionLetra];
+
+            const resultado = numDni + "-" + letra;
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>
