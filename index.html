@@ -19,6 +19,8 @@
             document.getElementById("resultado").innerHTML = "El DNI no es correcto";
         } else if (parseInt(numDni) > 99999999) {
             document.getElementById("resultado").innerHTML = "El DNI no es correcto";
+        } else if(isNaN(parseInt(numDni))) {
+            document.getElementById("resultado").innerHTML = "El DNI no es correcto";
         } else {
             const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
             const posicionLetra = numDni % 23;
